@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Все товары{% endblock %}
+
+{% block content %}
+    {% for product in products %}
+    <a href="http://127.0.0.1:8000/all/{{ product.id }}" id="pr">
+        <div class="product">
+            <h1>
+                {{product.title}}
+            </h1>
+            <h2>
+                {{product.price}} сум
+            </h2>
+            <img src="{{product.image.url}}" alt="{{product.title}}" id="img-n">
+        </div>
+    </a>
+    {% endfor %}
+{% endblock %}
+

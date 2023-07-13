@@ -18,7 +18,7 @@ body {
     color: rgb(0, 0, 0);
 }
 
-#a1, #a2, #a3 {
+#a1, #a2, #a3, #a4 {
     font-size: 20px;
     padding: 0 20px;
     text-decoration: none;
@@ -26,10 +26,10 @@ body {
 }
 
 #a1 {
-    margin-left: 700px;
+    margin-left: 600px;
 }
 
-#a2, #a3 {
+#a2, #a3, #a4 {
     border-left: 2px solid black;
 }
 
@@ -64,19 +64,27 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#footer {
+footer {
     background-color: hsl(181, 79%, 17%);
     color: white;
-    padding-bottom: 0px;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-#footer a {
+footer a {
     color: rgb(255, 255, 255);
     text-decoration: none;
     padding: 20px 10px;
+    margin: 20px 80px;
+    font-family:'Courier New', Courier, monospace;
 }
 
-#footer img {
+footer img {
     width: 20px;
 }
 
@@ -85,3 +93,57 @@ body {
     font-size: 20px;
 }
 
+.product {
+    display: grid;
+    border: 3px solid rgb(255, 166, 0);
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.product #img-n {
+    width: 400px;
+    height: 400px;
+}
+
+.product:hover {
+    border: 3px solid rgb(119, 0, 255);
+}
+
+#pr {
+    text-decoration: none;
+    color: black;
+}
+
+.pwrt {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.pwrt img {
+    width: 400px;
+    height: 400px;
+}
+
+.cat img {
+    width: 400px;
+    height: 400px;
+}
+
+.cat {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: 3px solid rgb(255, 166, 0);
+    display: grid;
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+}
+
+.cat:hover {
+    border: 3px solid rgb(119, 0, 255);
+}
+
+#aaa {
+    text-decoration: none;
+    color: black;
+}

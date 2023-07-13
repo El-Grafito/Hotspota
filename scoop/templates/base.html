@@ -12,9 +12,10 @@
         <div id="head">
             <p class="title">
                 Hotspot
-                <a href="http://127.0.0.1:8000/" id="a1">Товары</a>
-                <a href="http://127.0.0.1:8000/info/" id="a2">О нас</a>
-                <a href="http://127.0.0.1:8000/cat/" id="a3">Учителю Атабек</a>
+                <a href="http://127.0.0.1:8000/" id="a1">Котегории</a>
+                <a href="http://127.0.0.1:8000/all/" id="a2">Все товары</a>
+                <a href="http://127.0.0.1:8000/info/" id="a3">О нас</a>
+                <a href="http://127.0.0.1:8000/cat/" id="a4">Учителю Атабек</a>
             </p>
         </div>
     </header>
@@ -31,23 +32,19 @@
             </p>
         </div>
     </div>
-
+    <p></p>
     {% block content %}
     {% endblock %}
-    
+    <p></p>
     <footer>
-        <div id="footer">
-            <div id="links">
-                <p>
-                    <a href="https://t.me/hotspot_num1"><img src="../../static/images/ico/telegram.ico" alt="tico">@hotspot_num1</a>
-                    <a href="https://youtu.be/dQw4w9WgXcQ"><img src="../../static/images/ico/instagram.ico" alt="iico">@hotspot_num1</a>
-                </p>
-                <p>
-                    <a href="https://youtu.be/dQw4w9WgXcQ"><img src="../../static/images/ico/facebook.ico" alt="fico">@hotspot_shop</a>
-                    <a href="https://youtu.be/dQw4w9WgXcQ"><img src="../../static/images/ico/twitter.ico" alt="tico">@hotspot_sale</a>
-                </p>
-            </div>
-        </div>
+        <p>
+            <a href="https://t.me/hotspot_num1"><img src="../../static/images/ico/telegram.ico" alt="tico" id="telegram_ico">@hotspot_num1</a>
+            <a href="https://youtu.be/dQw4w9WgXcQ"><img src="../../static/images/ico/instagram.ico" alt="iico" id="instagram_ico">@hotspot_num1</a>
+        </p>
+        <p>
+            <a href="https://youtu.be/dQw4w9WgXcQ"><img src="../../static/images/ico/facebook.ico" alt="fico" id="facebook_ico">@hotspot_shop</a>
+            <a href="https://youtu.be/dQw4w9WgXcQ"><img src="../../static/images/ico/twitter.ico" alt="tico" id="twitter_ico">@hotspot_sale</a>
+        </p>
     </footer>
 </body>
 </html>

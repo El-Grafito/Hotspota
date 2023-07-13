@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ categorya.name }}{% endblock %}
+
+{% block content %}
+    <h1>{{ categorya.name }}</h1>
+    {% for product in productss %}
+        {% if product.category_id == categorya.pk %}
+            <a href="http://127.0.0.1:8000/all/{{ product.id }}" id="pr">
+                <div class="product">
+                    <h1>
+                        {{ product.title }}
+                    </h1>
+                    <h2>
+                        {{ product.price }} сум
+                    </h2>
+                    <img src="{{ product.image.url }}" alt="{{ product.title }}" id="img-n">
+                </div>
+            </a>
+        {% endif %}
+    {% endfor %}
+{% endblock %}
