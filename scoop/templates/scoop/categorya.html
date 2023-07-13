@@ -3,7 +3,7 @@
 {% block title %}{{ categorya.name }}{% endblock %}
 
 {% block content %}
-    <h1>{{ categorya.name }}</h1>
+    <h1 id="h21">{{ categorya.name }}</h1>
     {% for product in productss %}
         {% if product.category_id == categorya.pk %}
             <a href="http://127.0.0.1:8000/all/{{ product.id }}" id="pr">
