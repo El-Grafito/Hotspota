@@ -4,7 +4,7 @@
 
 {% block content %}
     {% for category in categorys %}
-    <a href="http://127.0.0.1:8000/categorya/{{ category.id }}" id="aaa">
+    <a href="{% url 'categorya' %}/{{ category.id }}" id="aaa">
         <div class="cat">
             <h1>{{category.name}}</h1>
             <img src="{{category.image.url}}" alt="{{category.name}}" id="img-c">

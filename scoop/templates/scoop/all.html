@@ -4,7 +4,7 @@
 
 {% block content %}
     {% for product in products %}
-    <a href="http://127.0.0.1:8000/all/{{ product.id }}" id="pr">
+    <a href="{% url 'all' %}/{{ product.id }}" id="pr">
         <div class="product">
             <h1>
                 {{product.title}}

@@ -11,12 +11,12 @@ from scoop.views import categorya
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home),
-    path('cat/', cat),
-    path('info/', info),
-    path('all/', all),
-    path('all/<pk>/', product_page),
-    path('categorya/<pk>/', categorya),
+    path('', home, name=home),
+    path('cat/', cat, name=cat),
+    path('info/', info, name=info),
+    path('all/', all, name=all),
+    path('all/<pk>/', product_page, name=product_page),
+    path('categorya/<pk>/', categorya, name=categorya),
 ]
 
 if settings.DEBUG:

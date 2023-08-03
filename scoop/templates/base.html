@@ -12,10 +12,10 @@
         <div id="head">
             <p class="title">
                 Hotspot
-                <a href="http://127.0.0.1:8000/" id="a1">Котегории</a>
-                <a href="http://127.0.0.1:8000/all/" id="a2">Все товары</a>
-                <a href="http://127.0.0.1:8000/info/" id="a3">О нас</a>
-                <a href="http://127.0.0.1:8000/cat/" id="a4">Учителю Атабек</a>
+                <a href="{% url 'home' %}" id="a1">Категории</a>
+                <a href="{% url 'all' %}" id="a2">Все товары</a>
+                <a href="{% url 'info' %}" id="a3">О нас</a>
+                <a href="{% url 'cat' %}" id="a4">Учителю Атабек</a>
             </p>
         </div>
     </header>
