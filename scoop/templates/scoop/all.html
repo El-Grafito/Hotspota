@@ -4,7 +4,7 @@
 
 {% block content %}
     {% for product in products %}
-    <a href="{% url 'all' %}/{{ product.id }}" id="pr">
+    <a href="{% url 'product_page' product.category.slug product.id %}" id="pr">
         <div class="product">
             <h1>
                 {{product.title}}

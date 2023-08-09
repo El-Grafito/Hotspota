@@ -1,8 +1,38 @@
-{% extends 'base.html' %}
-
-{% block title %}{{product.title}}{% endblock %}
-
-{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{product.title}}</title>
+    <link rel="stylesheet" href="../../../static/css/base.css">
+</head>
+<body>
+    <header>
+        <div id="head">
+            <p class="title">
+                Hotspot
+                <a href="{% url 'home' %}" id="a1">Категории</a>
+                <a href="{% url 'all' %}" id="a2">Все товары</a>
+                <a href="{% url 'info' %}" id="a3">О нас</a>
+                <a href="{% url 'cat' %}" id="a4">Учителю Атабек</a>
+            </p>
+        </div>
+    </header>
+    <div id="logo">
+        <div id="log">
+            <p id="p1">
+                интернет магазин
+            </p>
+            <p id="p2">
+                Hotspot
+            </p>
+            <p id="p3">
+                Низкая цена, высокое качество
+            </p>
+        </div>
+    </div>
+    <p></p>
 
 <div class="pwrt">
     <h1>
@@ -18,5 +48,17 @@
     <button id="b1">В корзину</button>
 </div>
 
-{% endblock %}
+<p></p>
+<footer>
+    <p>
+        <a href="https://t.me/hotspot_num1"><img src="../../../static/images/ico/telegram.ico" alt="tico" id="telegram_ico">@hotspot_num1</a>
+        <a href="https://youtu.be/dQw4w9WgXcQ"><img src="../../../static/images/ico/instagram.ico" alt="iico" id="instagram_ico">@hotspot_num1</a>
+    </p>
+    <p>
+        <a href="https://youtu.be/dQw4w9WgXcQ"><img src="../../../static/images/ico/facebook.ico" alt="fico" id="facebook_ico">@hotspot_shop</a>
+        <a href="https://youtu.be/dQw4w9WgXcQ"><img src="../../../static/images/ico/twitter.ico" alt="tico" id="twitter_ico">@hotspot_sale</a>
+    </p>
+</footer>
+</body>
+</html>
 

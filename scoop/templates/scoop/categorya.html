@@ -6,7 +6,7 @@
     <h1 id="h21">{{ categorya.name }}</h1>
     {% for product in productss %}
         {% if product.category_id == categorya.pk %}
-            <a href="{% url 'all' %}/{{ product.id }}" id="pr">
+            <a href="{% url 'product_page' product.category.slug product.id %}" id="pr">
                 <div class="product">
                     <h1>
                         {{ product.title }}

@@ -30,15 +30,17 @@ def all(request):
     }
     return render(request, 'scoop/all.html', context)
 
-def product_page(request, pk):
+def product_page(request, pk, category_slug):
     product = Product.objects.get(id=pk)
+    category = Category.objects.get(slug=category_slug)
     context = {
         'product': product,
+        'category_slug': category,
     }
     return render(request, 'scoop/product_page.html', context)
 
-def categorya(request, pk): 
-     categorya = Category.objects.get(id=pk)
+def categorya(request, slug): 
+     categorya = Category.objects.get(slug=slug)
      products = categorya.product_set.all()
      productss = Product.objects.all()
      context = {
