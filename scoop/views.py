@@ -1,7 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import Product
 from .models import Category
+from .forms import ProductForm
 
 
 def home(request):
@@ -50,4 +51,26 @@ def categorya(request, slug):
 
      }
      return render(request, 'scoop/categorya.html', context)
+
+def create(request):
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            cd = form.cleaned_data
+            Product.objects.create(
+                title=cd['title'],
+                description=cd['description'],
+                price=cd['price'],
+                image=cd['image'],
+                category=cd['category'],
+            )
+            return redirect(to='all')
+    else:
+        form = ProductForm()
+
+    context = {
+        'form': form,
+
+    }
+    return render(request, 'scoop/create.html', context)
 

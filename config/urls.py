@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls.static import static
 from django.conf import settings
-from scoop.views import home, cat, info, all, product_page, categorya
+from scoop.views import home, cat, info, all, product_page, categorya, create
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -12,6 +12,7 @@ urlpatterns = [
     path('all/', all, name='all'),
     path('categorya/<category_slug>/<pk>/', product_page, name='product_page'),
     path('categorya/<slug>/', categorya, name='categorya'),
+    path('create/', create, name='create'),
 ]
 
 if settings.DEBUG:
